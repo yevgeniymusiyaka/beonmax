@@ -1,21 +1,27 @@
 'use strict';
 
-var arr = [];
+let money = prompt("Ваш бюджет на месяц", ""),
+    time = prompt("Введите дату в формате YYYY-MM-DD", "");
 
-// let answer = confirm('Вы здесь?');
 
-// console.log( typeof(arr) );
+let appData = {
+    yourMoney: money,
+    timeData: time,
+    expenses: {},
+    optionalExpenses: {},
+    income:[],
+    savings: false
+}
 
-// let answer = +prompt('Ваш возаст', '18');
+let moneyPerMonth1 = prompt("Введите обязательную статью расходов в этом месяце", ""),
+howMuchMoney1 = prompt("Во сколько обойдется?", ""),
+moneyPerMonth2 = prompt("Введите обязательную статью расходов в этом месяце", ""),
+howMuchMoney2 = prompt("Во сколько обойдется?", "");
 
-// console.log( typeof(answer) );
+appData.expenses.moneyPerMonth1 = howMuchMoney1;
+appData.expenses.moneyPerMonth2 = howMuchMoney2;
 
-// console.log(4 + + "строка");
+let result = appData.yourMoney / 30;
 
-let incr = 10,
-    decr = 10;
+alert(result);
 
-console.log(incr++);
-console.log(decr--);
-console.log(incr);
-console.log(decr);
